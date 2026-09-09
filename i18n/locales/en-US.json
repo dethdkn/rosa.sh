@@ -43,13 +43,7 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Explore my projects, built with Nuxt, Vue, Tailwind CSS, and other cool technologies.",
-    "rosa_description": "🧑🏻‍💼 My personal webpage",
-    "govbr_description": "🔭 Landing page for Brazilian Center for Research in Physics",
-    "sso_description": "🫆 Single Sign-On (SSO) system for CBPF",
-    "uniposrio_description": "🎓 Registration portal for UNIPÓSRIO",
-    "lab_ia_description": "🤖 Exploring the Future with Science and Intelligence",
-    "ldap_studio_description": "🔍 A native macOS LDAP client, with a Rust-powered backend, for browsing, searching, and editing LDAP directories."
+    "description": "Explore my projects, built with Nuxt, Vue, Tailwind CSS, and other cool technologies."
   },
   "blog": {
     "title": "Blog",

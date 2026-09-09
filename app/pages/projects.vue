@@ -9,7 +9,6 @@
 
   const { data: projects } = await useFetch('/api/projects', {
     default: () => [] as Projects[],
-    watch: [locale],
   })
 </script>
 
@@ -24,7 +23,7 @@
       :title
       :badges
       :urls
-      :description="t(description)"
+      :description="description[locale === 'pt' ? 'pt' : 'en']"
       data-aos="fade-right" />
   </div>
 </template>

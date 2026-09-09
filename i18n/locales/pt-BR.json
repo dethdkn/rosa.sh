@@ -43,13 +43,7 @@
   },
   "projects": {
     "title": "Projetos",
-    "description": "Explore meus projetos, elaborados com Nuxt, Vue, Tailwind CSS e outras tecnologias interessantes.",
-    "rosa_description": "🧑🏻‍💼 Minha página web",
-    "govbr_description": "🔭 Página web do Centro Brasileiro de Pesquisas Físicas",
-    "sso_description": "🫆 Sistema de autenticação única (SSO) para o CBPF",
-    "uniposrio_description": "🎓 Portal de inscrições para a UNIPÓSRIO",
-    "lab_ia_description": "🤖 Explorando o Futuro com Ciência e Inteligência",
-    "ldap_studio_description": "🔍 Um cliente LDAP nativo para macOS, com backend em Rust, para navegar, pesquisar e editar diretórios LDAP."
+    "description": "Explore meus projetos, elaborados com Nuxt, Vue, Tailwind CSS e outras tecnologias interessantes."
   },
   "blog": {
     "title": "Blog",
