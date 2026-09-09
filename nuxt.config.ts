@@ -90,12 +90,4 @@ export default defineNuxtConfig({
   },
   icon: { customCollections: [{ prefix: 'cc', dir: 'app/assets/custom-icons' }] },
   linkChecker: { enabled: false },
-  scripts: {
-    registry: {
-      umamiAnalytics: {
-        trigger: 'onNuxtReady',
-        websiteId: '8f3f33ee-0a17-46db-b774-9a47c86ea808',
-      },
-    },
-  },
 })

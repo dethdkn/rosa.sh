@@ -1,48 +1,38 @@
 <script setup lang="ts">
-  const { proxy } = useScriptUmamiAnalytics()
+  const { proxy } = useScriptCloudflareWebAnalytics()
 
   const { siteVersion } = useRuntimeConfig().public
-
-  function clickSocial(name: string): void {
-    proxy.track('social', { name })
-  }
 
   const socials = ref([
     {
       url: 'mailto:gabriel@rosa.sh',
       icon: 'iconoir:at-sign',
       name: 'Email',
-      click: (): void => clickSocial('Email'),
     },
     {
       url: 'https://github.com/dethdkn',
       icon: 'iconoir:github',
       name: 'Github',
-      click: (): void => clickSocial('Github'),
     },
     {
       url: 'https://www.linkedin.com/in/gabrielsdrosa',
       icon: 'iconoir:linkedin',
       name: 'Linkedin',
-      click: (): void => clickSocial('Linkedin'),
     },
     {
       url: 'https://www.youtube.com/@gabrielsdrosa',
       icon: 'iconoir:youtube',
       name: 'Youtube',
-      click: (): void => clickSocial('Youtube'),
     },
     {
       url: 'https://www.behance.net/dethdkn',
       icon: 'iconoir:behance',
       name: 'Behance',
-      click: (): void => clickSocial('Behance'),
     },
     {
       url: 'https://www.instagram.com/deth.gsr',
       icon: 'iconoir:instagram',
       name: 'Instagram',
-      click: (): void => clickSocial('Instagram'),
     },
   ])
 </script>
@@ -57,7 +47,6 @@
         :to="social.url"
         target="_blank"
         :aria-label="social.name"
-        @click="social.click"
         class="transition-all duration-300 hover:drop-shadow-candy">
         <Icon
           :name="social.icon"
@@ -81,7 +70,6 @@
             to="https://nuxt.com"
             external
             target="_blank"
-            @click="proxy.track('footer', { name: 'nuxt' })"
             class="text-nuxt transition-all duration-300 hover:drop-shadow-nuxt dark:hover:drop-shadow-nuxtWhite">
             <Icon name="logos:nuxt-icon" :size="12" />
             <span>&nbsp;Nuxt</span>
@@ -94,7 +82,6 @@
             to="https://www.cloudflare.com/"
             external
             target="_blank"
-            @click="proxy.track('footer', { name: 'cloudflare' })"
             class="text-cloudflare transition-all duration-300 hover:drop-shadow-cloudflare">
             <Icon name="logos:cloudflare-icon" :size="12" />
             <span>&nbsp;Cloudflare</span>

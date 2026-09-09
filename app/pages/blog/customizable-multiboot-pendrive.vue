@@ -1,18 +1,12 @@
 <script setup lang="ts">
   const { t } = useI18n()
-  const { proxy } = useScriptUmamiAnalytics()
+  const { proxy } = useScriptCloudflareWebAnalytics()
 
   useHead({ title: t('posts.customizable_multiboot_pendrive.title') })
 
   useSeoMeta({ description: t('posts.customizable_multiboot_pendrive.description') })
 
   defineOgImage('Simple.takumi', { title: t('posts.customizable_multiboot_pendrive.title') })
-
-  function youtubePlay(event: { data: number }): void {
-    if (event.data === 1) {
-      proxy.track('play video', { video: 'customizable_multiboot' })
-    }
-  }
 </script>
 
 <template>
@@ -23,7 +17,7 @@
       </h1>
     </div>
     <div class="mt-10 space-y-5 px-10 text-obsidian dark:text-snow">
-      <ScriptYouTubePlayer video-id="nunxSwZ2xfA" @state-change="youtubePlay" />
+      <ScriptYouTubePlayer video-id="nunxSwZ2xfA" />
       <p>{{ t('posts.customizable_multiboot_pendrive.paragraph1') }}</p>
       <div>
         <NuxtLink

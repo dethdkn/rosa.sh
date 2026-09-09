@@ -1,7 +1,7 @@
 <script setup lang="ts">
   const { t } = useI18n()
   const colorMode = useColorMode()
-  const { proxy } = useScriptUmamiAnalytics()
+  const { proxy } = useScriptCloudflareWebAnalytics()
 
   useHead({ title: t('about.title') })
 
@@ -60,7 +60,6 @@
                 to="https://cbpf.br"
                 external
                 target="_blank"
-                @click="proxy.track('experience', { name: 'CBPF' })"
                 class="mb-2 block cursor-pointer text-lg leading-tight font-medium text-obsidian transition-all duration-300 hover:text-candy hover:drop-shadow-candy dark:border-snow dark:text-snow dark:hover:text-candy">
                 {{ t('about.cbpf') }}
               </NuxtLink>

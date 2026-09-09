@@ -1,6 +1,6 @@
 <script setup lang="ts">
   const { t } = useI18n()
-  const { proxy } = useScriptUmamiAnalytics()
+  const { proxy } = useScriptCloudflareWebAnalytics()
 
   useHead({ title: t('posts.installing_arch_linux.title') })
 
@@ -46,12 +46,6 @@ usermod -aG sudo gabrielrosa
 nano /etc/sudoers
 pacman -Syu
 pacman -S neofetch`
-
-  function youtubePlay(event: { data: number }): void {
-    if (event.data === 1) {
-      proxy.track('play video', { video: 'installing_arch' })
-    }
-  }
 </script>
 
 <template>
@@ -62,7 +56,7 @@ pacman -S neofetch`
       </h1>
     </div>
     <div class="mt-10 space-y-5 px-10 text-obsidian dark:text-snow">
-      <ScriptYouTubePlayer video-id="YGX3None2y8" @state-change="youtubePlay" />
+      <ScriptYouTubePlayer video-id="YGX3None2y8" />
       <p>{{ t('posts.installing_arch_linux.paragraph1') }}</p>
       <CodeHighlight file-name="Arch Install" :code="code1" lang="shell" />
       <p>{{ t('posts.installing_arch_linux.paragraph2') }}</p>

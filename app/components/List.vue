@@ -12,7 +12,7 @@
     description: { type: String, default: '' },
   })
 
-  const { proxy } = useScriptUmamiAnalytics()
+  const { proxy } = useScriptCloudflareWebAnalytics()
 </script>
 
 <template>
@@ -25,7 +25,6 @@
         external
         target="_blank"
         :aria-label="urls?.[0]?.aria"
-        @click="proxy.track('List', { name: title, url: urls?.[0]?.url })"
         class="inline cursor-pointer border-b-2 border-obsidian text-2xl text-obsidian transition-all duration-300 hover:text-candy hover:drop-shadow-candy dark:border-snow dark:text-snow dark:hover:text-candy">
         {{ title }}
       </NuxtLink>
@@ -33,7 +32,6 @@
         v-else
         :to="urls?.[0]?.url"
         :aria-label="urls?.[0]?.aria"
-        @click="proxy.track('List', { name: title, url: urls?.[0]?.url })"
         class="inline cursor-pointer border-b-2 border-obsidian text-2xl text-obsidian transition-all duration-300 hover:text-candy hover:drop-shadow-candy dark:border-snow dark:text-snow dark:hover:text-candy">
         {{ title }}
       </NuxtLink>
@@ -52,7 +50,6 @@
           external
           target="_blank"
           :aria-label="url.aria"
-          @click="proxy.track('List', { name: title, url: url.url })"
           class="text-3xl text-obsidian transition-all duration-300 hover:text-candy hover:drop-shadow-candy dark:text-snow dark:hover:text-candy">
           <Icon :name="url.icon" />
         </NuxtLink>
@@ -60,7 +57,6 @@
           v-else
           :to="url.url"
           :aria-label="url.aria"
-          @click="proxy.track('List', { name: title, url: url.url })"
           class="text-3xl text-obsidian transition-all duration-300 hover:text-candy hover:drop-shadow-candy dark:text-snow dark:hover:text-candy">
           <Icon :name="url.icon" />
         </NuxtLinkLocale>

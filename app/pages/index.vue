@@ -1,6 +1,6 @@
 <script setup lang="ts">
   const { t } = useI18n()
-  const { proxy } = useScriptUmamiAnalytics()
+  const { proxy } = useScriptCloudflareWebAnalytics()
 
   useHead({ title: t('home.title') })
 
@@ -14,7 +14,6 @@
   })
 
   function pinkBlast(): void {
-    proxy.track('pink blast', {})
     const { cancel } = emojiBlasts({
       interval: 40,
       emojis: ['🌹', '🌸', '💗', '💓', '💖', '💕', '💞', '💝', '🦩', '💘', '🩷', '🌷', '🌺'],
