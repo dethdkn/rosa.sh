@@ -25,12 +25,12 @@
     "@iconify-json/iconoir": "^1.2.11",
     "@iconify-json/ion": "^1.2.7",
     "@iconify-json/lineicons": "^1.2.6",
-    "@iconify-json/logos": "^1.2.13",
-    "@iconify-json/material-symbols": "^1.2.90",
+    "@iconify-json/logos": "^1.2.14",
+    "@iconify-json/material-symbols": "^1.2.91",
     "@iconify-json/prime": "^1.2.5",
-    "@iconify-json/simple-icons": "^1.2.94",
+    "@iconify-json/simple-icons": "^1.2.95",
     "@iconify-json/streamline": "^1.2.5",
-    "@iconify-json/vscode-icons": "^1.2.76",
+    "@iconify-json/vscode-icons": "^1.2.77",
     "@nuxt/a11y": "^1.0.0-alpha.1",
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/hints": "^1.1.4",
@@ -41,14 +41,14 @@
     "@nuxtjs/i18n": "^10.6.0",
     "@nuxtjs/seo": "^5.3.14",
     "@tailwindcss/vite": "^4.3.3",
-    "@takumi-rs/core": "^2.13.5",
-    "@takumi-rs/wasm": "^2.13.5",
+    "@takumi-rs/core": "^2.13.7",
+    "@takumi-rs/wasm": "^2.13.7",
     "@vueuse/nuxt": "^14.4.0",
     "clsx": "^2.1.1",
     "destr": "^2.0.5",
     "emoji-blast": "^0.11.0",
     "mime": "^4.1.0",
-    "motion-v": "^2.4.0",
+    "motion-v": "^2.4.2",
     "nuxt": "4.5.2",
     "nuxt-aos": "^1.2.6",
     "reka-ui": "^2.10.4",
@@ -60,14 +60,14 @@
     "vue-router": "^5.3.1"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260903.1",
+    "@cloudflare/workers-types": "^5.20260908.1",
     "@dethdkn/ox-config": "^1.0.25",
     "@golar/vue": "^0.1.10",
     "@types/youtube": "^0.3.0",
     "bumpp": "^12.3.0",
     "golar": "^0.1.10",
     "typescript": "^7.0.2",
-    "wrangler": "^4.129.0"
+    "wrangler": "^4.130.0"
   },
-  "packageManager": "bun@1.4.0"
+  "packageManager": "bun@1.4.2"
 }
