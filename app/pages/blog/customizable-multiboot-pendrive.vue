@@ -45,7 +45,7 @@
       </div>
       <div>
         <NuxtLink
-          to="https://rosa.dev.br/downloads/lavenza.zip"
+          to="https://rosa.sh/downloads/lavenza.zip"
           target="_blank"
           class="inline-block border-b-2 text-obsidian hover:border-candy hover:text-candy dark:text-snow hover:dark:border-candy dark:hover:text-candy">
           Lavenza Theme

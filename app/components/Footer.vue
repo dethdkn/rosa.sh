@@ -9,7 +9,7 @@
 
   const socials = ref([
     {
-      url: 'mailto:gabriel@rosa.dev.br',
+      url: 'mailto:gabriel@rosa.sh',
       icon: 'iconoir:at-sign',
       name: 'Email',
       click: (): void => clickSocial('Email'),

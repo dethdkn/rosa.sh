@@ -1,12 +1,12 @@
-<h1 align="center">rosa.dev.br</h1>
+<h1 align="center">rosa.sh</h1>
 <p align="center">🧑‍💼 My personal webpage</p>
 
 <p align="center">
-   <a href="https://rosa.dev.br">
-      <img src="https://img.shields.io/badge/check me!-👻-F28AA9" alt="rosa.dev.br"/>
+   <a href="https://rosa.sh">
+      <img src="https://img.shields.io/badge/check me!-👻-F28AA9" alt="rosa.sh"/>
    </a>
-   <a href="https://github.com/dethdkn/rosa.dev.br/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/dethdkn/rosa.dev.br?color=%233da639&logo=open%20source%20initiative" alt="License"/>
+   <a href="https://github.com/dethdkn/rosa.sh/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/dethdkn/rosa.sh?color=%233da639&logo=open%20source%20initiative" alt="License"/>
   </a>
    <a href="https://gitmoji.dev">
       <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67" alt="Gitmoji"/>
@@ -47,4 +47,4 @@
 ## 📝 License
 
 Copyright © 2025 [Gabriel 'DethDKN' Rosa](https://github.com/dethdkn)\
-This project is under [MIT license](https://github.com/dethdkn/rosa.dev.br/blob/main/LICENSE)
+This project is under [MIT license](https://github.com/dethdkn/rosa.sh/blob/main/LICENSE)

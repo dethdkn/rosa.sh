@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/main.css'],
   site: {
-    url: 'https://rosa.dev.br/',
+    url: 'https://rosa.sh/',
     name: 'Gabriel Rosa',
     description: 'Software Engineer & DevOps',
     twitter: '@deth_gr',
@@ -51,10 +51,10 @@ export default defineNuxtConfig({
       deployConfig: true,
       nodeCompat: true,
       wrangler: {
-        name: 'rosa-dev-br',
+        name: 'rosa-sh',
         workers_dev: false,
-        route: 'rosa.dev.br/*',
-        r2_buckets: [{ binding: 'R2', bucket_name: 'rosa-dev-br' }],
+        route: 'rosa.sh/*',
+        r2_buckets: [{ binding: 'R2', bucket_name: 'rosa-sh' }],
         kv_namespaces: [{ binding: 'KV', id: '39c4dd68c5dc4ca5b5ad77db972e07a3' }],
         observability: { logs: { enabled: true, head_sampling_rate: 1, invocation_logs: true } },
       },
@@ -68,7 +68,7 @@ export default defineNuxtConfig({
   },
   vite: { plugins: [tailwindcss()] },
   i18n: {
-    baseUrl: 'https://rosa.dev.br/',
+    baseUrl: 'https://rosa.sh/',
     defaultLocale: 'en',
     locales: [
       {
@@ -94,7 +94,7 @@ export default defineNuxtConfig({
     registry: {
       umamiAnalytics: {
         trigger: 'onNuxtReady',
-        websiteId: 'fb1a8842-f8f9-4f58-84ac-21132f0f8414',
+        websiteId: '8f3f33ee-0a17-46db-b774-9a47c86ea808',
       },
     },
   },
