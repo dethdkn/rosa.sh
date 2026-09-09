@@ -12,5 +12,7 @@ export default defineEventHandler(async () => {
     return cert1.title.localeCompare(cert2.title)
   })
 
-  return certificates
+  const tCertificates = certificates.toReversed()
+
+  return tCertificates
 })
