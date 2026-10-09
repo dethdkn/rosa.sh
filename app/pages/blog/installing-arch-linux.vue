@@ -1,12 +1,12 @@
 <script setup lang="ts">
-  const { t } = useI18n()
+  const { t } = useI18n({ useScope: 'local' })
   const { proxy } = useScriptCloudflareWebAnalytics()
 
-  useHead({ title: t('posts.installing_arch_linux.title') })
+  useHead({ title: t('title') })
 
-  useSeoMeta({ description: t('posts.installing_arch_linux.description') })
+  useSeoMeta({ description: t('description') })
 
-  defineOgImage('Simple.takumi', { title: t('posts.installing_arch_linux.title') })
+  defineOgImage('Simple.takumi', { title: t('title') })
 
   const code1 = `ping cbpf.br
 timedatectl set-ntp true
@@ -52,15 +52,34 @@ pacman -S neofetch`
   <div class="mx-auto max-w-7xl">
     <div class="space-y-10 px-20 py-5 text-center sm:text-start lg:space-y-20">
       <h1 class="inline border-b-2 border-candy text-4xl text-obsidian dark:text-snow">
-        {{ t('posts.installing_arch_linux.title') }}
+        {{ t('title') }}
       </h1>
     </div>
     <div class="mt-10 space-y-5 px-10 text-obsidian dark:text-snow">
       <ScriptYouTubePlayer video-id="YGX3None2y8" />
-      <p>{{ t('posts.installing_arch_linux.paragraph1') }}</p>
+      <p>{{ t('paragraph1') }}</p>
       <CodeHighlight file-name="Arch Install" :code="code1" lang="shell" />
-      <p>{{ t('posts.installing_arch_linux.paragraph2') }}</p>
-      <p>{{ t('posts.final_paragraph') }}</p>
+      <p>{{ t('paragraph2') }}</p>
+      <p>{{ t('final_paragraph') }}</p>
     </div>
   </div>
 </template>
+
+<i18n lang="json">
+{
+  "en": {
+    "title": "Installing Arch Linux (the easiest YouTube guide)",
+    "description": "Effortlessly install Arch Linux with this YouTube guide, simplifying the process for a seamless setup.",
+    "paragraph1": "Unfortunately, I didn't create an English version for this video. However, below, you'll find all the commands used. Perhaps it's possible to follow along just by watching.",
+    "paragraph2": "Hope this helps! 😉",
+    "final_paragraph": "If you have any questions or would like to get in touch, feel free to reach out to me on any of the social media platforms listed below. Thank you very much for reading!"
+  },
+  "pt": {
+    "title": "Instalando o Arch Linux (o guia mais fácil do youtube)",
+    "description": "Instale o Arch Linux facilmente com este guia no YouTube, simplificando o processo para uma configuração sem complicações.",
+    "paragraph1": "Abaixo, você encontrará todos os comandos utilizados neste vídeo.",
+    "paragraph2": "Espero ter ajudado! 😉",
+    "final_paragraph": "Se você tiver alguma dúvida ou quiser entrar em contato, sinta-se à vontade para me encontrar em qualquer uma das redes sociais listadas abaixo. Muito obrigado por ler!"
+  }
+}
+</i18n>

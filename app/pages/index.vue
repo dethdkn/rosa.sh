@@ -1,16 +1,16 @@
 <script setup lang="ts">
-  const { t } = useI18n()
+  const { t } = useI18n({ useScope: 'local' })
   const { proxy } = useScriptCloudflareWebAnalytics()
 
-  useHead({ title: t('home.title') })
+  useHead({ title: t('title') })
 
-  useSeoMeta({ description: t('home.subtitle') })
+  useSeoMeta({ description: t('subtitle') })
 
   defineOgImage('Home.takumi', {
-    title: t('home.title'),
-    im: t('home.simple_im'),
-    aka: t('home.aka'),
-    subtitle: t('home.subtitle'),
+    title: t('title'),
+    im: t('simple_im'),
+    aka: t('aka'),
+    subtitle: t('subtitle'),
   })
 
   function pinkBlast(): void {
@@ -51,3 +51,20 @@
     </div>
   </div>
 </template>
+
+<i18n lang="json">
+{
+  "en": {
+    "title": "Home",
+    "subtitle": "Software Engineer & DevOps",
+    "simple_im": "Im",
+    "aka": "aka"
+  },
+  "pt": {
+    "title": "Início",
+    "subtitle": "Engenheiro de Software & DevOps",
+    "simple_im": "Eu sou o",
+    "aka": "ou"
+  }
+}
+</i18n>

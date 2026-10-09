@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/fonts',
     '@nuxt/image',
+    '@nuxt/scripts',
     '@nuxt/a11y',
     '@nuxt/hints',
     '@nuxtjs/color-mode',
@@ -74,14 +75,12 @@ export default defineNuxtConfig({
         code: 'en',
         language: 'en-US',
         name: 'English (US)',
-        file: 'en-US.json',
         flag: 'flag:us-4x3',
       },
       {
         code: 'pt',
         language: 'pt-BR',
         name: 'Português (BR)',
-        file: 'pt-BR.json',
         flag: 'flag:br-4x3',
       },
     ],

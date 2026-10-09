@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  const { locale, locales, setLocale, setLocaleCookie, t } = useI18n()
+  const { locale, locales, setLocale, setLocaleCookie } = useI18n()
+  const { t } = useI18n({ useScope: 'local' })
   const colorMode = useColorMode()
 
   function setLocaleAndCookie(code: 'en' | 'pt'): void {
@@ -8,11 +9,11 @@
   }
 
   const routes = computed(() => [
-    { path: '/', text: t('nav.home') },
-    { path: '/about', text: t('nav.about') },
-    { path: '/certificates', text: t('nav.certificates') },
-    { path: '/projects', text: t('nav.projects') },
-    { path: '/blog', text: t('nav.blog') },
+    { path: '/', text: t('home') },
+    { path: '/about', text: t('about') },
+    { path: '/certificates', text: t('certificates') },
+    { path: '/projects', text: t('projects') },
+    { path: '/blog', text: t('blog') },
   ])
 
   const languages = computed(() =>
@@ -26,19 +27,19 @@
 
   const themes = computed(() => [
     {
-      text: t('nav.system'),
+      text: t('system'),
       icon: 'iconoir:computer',
       click: (): string => (colorMode.preference = 'system'),
       active: colorMode.preference === 'system',
     },
     {
-      text: t('nav.light'),
+      text: t('light'),
       icon: 'iconoir:sun-light',
       click: (): string => (colorMode.preference = 'light'),
       active: colorMode.preference === 'light',
     },
     {
-      text: t('nav.dark'),
+      text: t('dark'),
       icon: 'iconoir:moon-sat',
       click: (): string => (colorMode.preference = 'dark'),
       active: colorMode.preference === 'dark',
@@ -60,7 +61,7 @@
       <NuxtLink to="/" class="group flex items-center">
         <NuxtImg
           src="/logo.webp"
-          :alt="t('nav.logo')"
+          :alt="t('logo')"
           class="mr-3 size-8 group-hover:animate-pulse"
           preload />
         <span
@@ -69,14 +70,14 @@
         >
       </NuxtLink>
       <div class="flex items-center space-x-4 sm:mt-0 lg:order-2">
-        <Dropdown :options="languages" :aria-label="t('nav.language')">
+        <Dropdown :options="languages" :aria-label="t('language')">
           <Icon
             name="iconoir:chat-bubble-translate"
             :size="24"
             class="text-obsidian hover:text-candy dark:text-snow dark:hover:text-candy" />
         </Dropdown>
         <ClientOnly>
-          <Dropdown :options="themes" :icon-size="14" :aria-label="t('nav.theme')">
+          <Dropdown :options="themes" :icon-size="14" :aria-label="t('theme')">
             <Icon
               :name="activeIcon || ''"
               :size="24"
@@ -87,7 +88,7 @@
           </template>
         </ClientOnly>
         <button
-          :aria-label="t('nav.menu')"
+          :aria-label="t('menu')"
           class="flex items-center justify-center lg:hidden"
           @click="menuClosed = !menuClosed">
           <Icon
@@ -115,3 +116,36 @@
     </div>
   </nav>
 </template>
+
+<i18n lang="json">
+{
+  "en": {
+    "home": "Home",
+    "about": "About me",
+    "certificates": "Certificates",
+    "projects": "Projects",
+    "blog": "Blog",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark",
+    "logo": "Letter G logo",
+    "language": "Change language",
+    "theme": "Change theme",
+    "menu": "Open the menu"
+  },
+  "pt": {
+    "home": "Início",
+    "about": "Sobre mim",
+    "certificates": "Certificados",
+    "projects": "Projetos",
+    "blog": "Blog",
+    "system": "Sistema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "logo": "Logo contendo uma letra G",
+    "language": "Mudar idioma",
+    "theme": "Mudar tema",
+    "menu": "Abrir o menu"
+  }
+}
+</i18n>
