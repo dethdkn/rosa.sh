@@ -1,6 +1,6 @@
 {
   "name": "rosa-sh",
-  "version": "3.6.15",
+  "version": "3.7.0",
   "private": true,
   "type": "module",
   "scripts": {
