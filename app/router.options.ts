@@ -2,6 +2,7 @@
 import type { RouterConfig } from '@nuxt/schema'
 
 export default {
+  // oxlint-disable-next-line typescript/no-deprecated
   scrollBehavior(to, from, savedPosition) {
     const nuxtApp = useNuxtApp()
 
