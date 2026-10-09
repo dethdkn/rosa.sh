@@ -6,25 +6,23 @@
 
   useSeoMeta({ description: t('description') })
 
-  defineOgImage('Simple.takumi', { title: t('title') })
+  defineOgImage('Simple.takumi', { title: t('title'), description: t('description') })
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl">
-    <div class="space-y-10 px-20 py-5 text-center sm:text-start lg:space-y-20">
-      <h1 class="inline border-b-2 border-candy text-4xl text-obsidian dark:text-snow">
-        {{ t('title') }}
-      </h1>
-    </div>
-    <div class="mt-10 space-y-5 px-10 text-obsidian dark:text-snow">
-      <ScriptYouTubePlayer video-id="nunxSwZ2xfA" />
+  <article class="mx-auto w-full max-w-4xl px-6 py-12 sm:px-10">
+    <PageHeader :title="t('title')" :description="t('description')" />
+    <div class="mt-12 space-y-6 text-lg leading-relaxed text-obsidian/85 dark:text-snow/80">
+      <div class="overflow-hidden rounded-2xl border border-obsidian/10 dark:border-snow/10">
+        <ScriptYouTubePlayer video-id="nunxSwZ2xfA" />
+      </div>
       <p>{{ t('paragraph1') }}</p>
       <div>
         <NuxtLink
           to="https://www.ventoy.net/en/download.html"
           external
           target="_blank"
-          class="inline-block border-b-2 text-obsidian hover:border-candy hover:text-candy dark:text-snow hover:dark:border-candy dark:hover:text-candy">
+          class="inline-block border-b-2 border-candy/50 text-obsidian transition-all duration-300 hover:border-candy hover:text-candy dark:text-snow dark:hover:text-candy">
           Download Ventoy
         </NuxtLink>
       </div>
@@ -33,7 +31,7 @@
           to="https://www.ventoy.net/en/plugin_theme.html"
           external
           target="_blank"
-          class="inline-block border-b-2 text-obsidian hover:border-candy hover:text-candy dark:text-snow hover:dark:border-candy dark:hover:text-candy">
+          class="inline-block border-b-2 border-candy/50 text-obsidian transition-all duration-300 hover:border-candy hover:text-candy dark:text-snow dark:hover:text-candy">
           Ventoy Theme Plugin
         </NuxtLink>
       </div>
@@ -41,13 +39,13 @@
         <NuxtLink
           to="https://rosa.sh/downloads/lavenza.zip"
           target="_blank"
-          class="inline-block border-b-2 text-obsidian hover:border-candy hover:text-candy dark:text-snow hover:dark:border-candy dark:hover:text-candy">
+          class="inline-block border-b-2 border-candy/50 text-obsidian transition-all duration-300 hover:border-candy hover:text-candy dark:text-snow dark:hover:text-candy">
           Lavenza Theme
         </NuxtLink>
       </div>
       <p>{{ t('final_paragraph') }}</p>
     </div>
-  </div>
+  </article>
 </template>
 
 <i18n lang="json">

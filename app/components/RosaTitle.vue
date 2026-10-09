@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <i18n-t keypath="im" tag="h1" class="mb-2 text-4xl text-obsidian dark:text-snow">
+  <i18n-t keypath="im" tag="h1" class="mb-2 text-4xl text-obsidian md:text-5xl dark:text-snow">
     <template #name>
       <span class="border-b-2 border-candy">Gabriel Rosa</span>
     </template>

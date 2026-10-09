@@ -7,70 +7,74 @@
 
   useSeoMeta({ description: t('description') })
 
-  defineOgImage('Simple.takumi', { title: t('title') })
+  defineOgImage('Simple.takumi', { title: t('title'), description: t('description') })
 
   const isDark = computed(() => colorMode.value === 'dark')
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl">
-    <div class="space-y-10 px-20 py-5 lg:space-y-20" data-aos="fade-up">
-      <div class="border-b border-gray-300 pb-10 text-center sm:text-start dark:border-gray-700">
-        <h1 class="inline border-b-2 border-candy text-4xl text-obsidian dark:text-snow">
-          {{ t('title') }}
-        </h1>
-        <p class="mt-8 block text-center text-xl text-obsidian lg:px-20 dark:text-snow">
+  <div class="mx-auto w-full max-w-6xl space-y-20 px-6 py-12 sm:px-10 lg:px-20">
+    <section class="space-y-10" data-aos="fade-up">
+      <PageHeader :title="t('title')" />
+      <div class="max-w-3xl space-y-6 text-lg leading-relaxed text-obsidian/85 dark:text-snow/80">
+        <p>
           {{ t('paragraph1') }}
         </p>
-        <p class="mt-8 block text-center text-xl text-obsidian lg:px-20 dark:text-snow">
+        <p>
           {{ t('paragraph2') }}
         </p>
-        <p class="mt-8 block text-center text-xl text-obsidian lg:px-20 dark:text-snow">
+        <p>
           {{ t('paragraph3') }}
         </p>
       </div>
-      <div
-        class="border-b border-gray-300 pb-10 text-center sm:text-start dark:border-gray-700"
-        data-aos="fade-up">
-        <h2 class="inline border-b-2 border-candy text-4xl text-obsidian dark:text-snow">
+    </section>
+    <section class="space-y-10" data-aos="fade-up">
+      <div class="text-center sm:text-start">
+        <h2 class="inline-block border-b-2 border-candy pb-1 text-4xl text-obsidian dark:text-snow">
           {{ t('experience') }}
         </h2>
-        <div class="mt-8 flex items-center justify-center lg:px-20">
-          <ol
-            class="relative border-s border-gray-200 text-gray-500 dark:border-gray-700 dark:text-gray-400">
-            <li class="ms-6 mb-4">
-              <span
-                class="absolute -inset-s-4 flex size-8 items-center justify-center rounded-full bg-candy">
-                <ClientOnly>
-                  <Icon
-                    v-if="isDark"
-                    name="cc:cbpf-l"
-                    size="1.5rem"
-                    class="text-pearl dark:text-onyx" />
-                  <Icon v-else name="cc:cbpf-d" size="1.5rem" class="text-pearl dark:text-onyx" />
-                  <template #fallback>
-                    <Icon
-                      name="iconoir:refresh"
-                      size="1.5rem"
-                      class="animate-spin text-pearl dark:text-onyx" />
-                  </template>
-                </ClientOnly>
-              </span>
-              <NuxtLink
-                to="https://cbpf.br"
-                external
-                target="_blank"
-                class="mb-2 block cursor-pointer text-lg leading-tight font-medium text-obsidian transition-all duration-300 hover:text-candy hover:drop-shadow-candy dark:border-snow dark:text-snow dark:hover:text-candy">
-                {{ t('cbpf') }}
-              </NuxtLink>
-              <p class="mb-2">
-                {{ t('engineer_devops') }}
-              </p>
+      </div>
+      <ol class="relative ms-4 border-s border-candy/30">
+        <li class="ms-8">
+          <span
+            class="absolute -inset-s-4 flex size-8 items-center justify-center rounded-full bg-candy ring-4 ring-pearl dark:ring-onyx">
+            <ClientOnly>
+              <Icon
+                v-if="isDark"
+                name="cc:cbpf-l"
+                size="1.5rem"
+                class="text-pearl dark:text-onyx" />
+              <Icon v-else name="cc:cbpf-d" size="1.5rem" class="text-pearl dark:text-onyx" />
+              <template #fallback>
+                <Icon
+                  name="iconoir:refresh"
+                  size="1.5rem"
+                  class="animate-spin text-pearl dark:text-onyx" />
+              </template>
+            </ClientOnly>
+          </span>
+          <div
+            class="rounded-2xl border border-obsidian/10 bg-milk/70 p-6 dark:border-snow/10 dark:bg-eclipse/70">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div class="space-y-1">
+                <NuxtLink
+                  to="https://cbpf.br"
+                  external
+                  target="_blank"
+                  class="block text-xl leading-tight font-medium text-obsidian transition-all duration-300 hover:text-candy hover:drop-shadow-candy dark:text-snow dark:hover:text-candy">
+                  {{ t('cbpf') }}
+                </NuxtLink>
+                <p class="text-obsidian/90 dark:text-snow/70">
+                  {{ t('engineer_devops') }}
+                </p>
+              </div>
               <p
-                class="m-0 inline rounded border border-candy p-1 text-sm whitespace-nowrap sm:m-1">
+                class="rounded-full border border-candy/50 bg-candy/10 px-3 py-1 text-sm whitespace-nowrap text-obsidian dark:text-candy">
                 {{ t('twnt') }}
               </p>
-              <p class="mt-2">
+            </div>
+            <div class="mt-5 space-y-4 leading-relaxed text-obsidian/90 dark:text-snow/75">
+              <p>
                 {{ t('cbpf_description1') }}
               </p>
               <p>
@@ -88,11 +92,11 @@
               <p>
                 {{ t('cbpf_description6') }}
               </p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
   </div>
 </template>
 

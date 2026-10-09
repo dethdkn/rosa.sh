@@ -5,7 +5,7 @@
 
   useSeoMeta({ description: t('description') })
 
-  defineOgImage('Techs.takumi', { title: t('title') })
+  defineOgImage('Techs.takumi', { title: t('title'), description: t('description') })
 
   const localePath = useLocalePath()
 
@@ -67,20 +67,20 @@
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl space-y-10 px-20 py-5 text-center sm:text-start lg:space-y-20">
-    <h1 class="inline border-b-2 border-candy text-4xl text-obsidian dark:text-snow">
-      {{ t('title') }}
-    </h1>
-    <List
-      v-for="{ title, badges, urls, description, locale, self } in posts"
-      :key="title"
-      :title
-      :badges
-      :urls
-      :description
-      :locale
-      :self
-      data-aos="fade-right" />
+  <div class="mx-auto w-full max-w-6xl space-y-12 px-6 py-12 sm:px-10 lg:px-20">
+    <PageHeader :title="t('title')" :description="t('description')" />
+    <div class="grid gap-6 md:grid-cols-2">
+      <List
+        v-for="{ title, badges, urls, description, locale, self } in posts"
+        :key="title"
+        :title
+        :badges
+        :urls
+        :description
+        :locale
+        :self
+        data-aos="fade-up" />
+    </div>
   </div>
 </template>
 

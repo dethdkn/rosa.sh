@@ -11,26 +11,32 @@
     async () =>
       (html.value = await codeToHtml(props.code, {
         lang: props.lang,
-        themes: { light: 'material-theme-lighter', dark: 'tokyo-night' },
+        themes: { light: 'github-light-default', dark: 'tokyo-night' },
+        // tokyo-night comments fail WCAG AA contrast
+        colorReplacements: { 'tokyo-night': { '#51597d': '#8089b3' } },
       })),
   )
 </script>
 
 <template>
-  <div
-    class="relative rounded-2xl border border-cloud bg-milk p-5 dark:border-onyx dark:bg-eclipse">
-    <div class="overflow-auto px-3 py-6">
-      <span class="absolute top-0 left-0 rounded bg-zinc-100 px-3 font-sans dark:bg-zinc-900">{{
-        fileName
-      }}</span>
-      <div class="mt-2">
-        <ClientOnly>
-          <div v-html="html" />
-          <template #fallback>
-            <pre><code>{{ code }}</code></pre>
-          </template>
-        </ClientOnly>
-      </div>
+  <figure
+    class="overflow-hidden rounded-2xl border border-obsidian/10 bg-white dark:border-snow/10 dark:bg-eclipse">
+    <figcaption
+      class="flex items-center gap-3 border-b border-obsidian/10 px-4 py-2.5 text-sm text-obsidian/90 dark:border-snow/10 dark:text-snow/70">
+      <span aria-hidden="true" class="flex gap-1.5">
+        <span class="size-3 rounded-full bg-candy" />
+        <span class="size-3 rounded-full bg-candy/60" />
+        <span class="size-3 rounded-full bg-candy/30" />
+      </span>
+      {{ fileName }}
+    </figcaption>
+    <div class="overflow-auto p-5 font-mono text-sm leading-relaxed **:font-mono">
+      <ClientOnly>
+        <div v-html="html" />
+        <template #fallback>
+          <pre><code>{{ code }}</code></pre>
+        </template>
+      </ClientOnly>
     </div>
-  </div>
+  </figure>
 </template>

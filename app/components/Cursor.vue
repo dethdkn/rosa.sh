@@ -289,5 +289,9 @@
 </script>
 
 <template>
-  <canvas id="canvas" ref="canvasRef" :class="cn('pointer-events-none fixed inset-0 z-50')" />
+  <canvas
+    id="canvas"
+    ref="canvasRef"
+    aria-hidden="true"
+    :class="cn('pointer-events-none fixed inset-0 z-50 pointer-coarse:hidden')" />
 </template>

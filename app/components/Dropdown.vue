@@ -5,6 +5,7 @@
       required: true,
     },
     iconSize: { type: Number, default: 10 },
+    label: { type: String, required: true },
   })
 
   const state = ref(false)
@@ -12,20 +13,20 @@
 
 <template>
   <DropdownMenuRoot v-model:open="state">
-    <DropdownMenuTrigger class="flex items-center justify-center">
+    <DropdownMenuTrigger class="flex items-center justify-center" :aria-label="label">
       <slot />
     </DropdownMenuTrigger>
 
     <DropdownMenuPortal>
       <DropdownMenuContent
-        class="min-w-36 rounded-md bg-gray-200 p-1.25 will-change-[opacity,transform] outline-none data-[side=bottom]:animate-slideUpAndFade dark:bg-gray-800"
+        class="z-50 min-w-40 rounded-xl border border-obsidian/10 bg-milk/95 p-1.5 shadow-lg backdrop-blur-md will-change-[opacity,transform] outline-none data-[side=bottom]:animate-slideUpAndFade dark:border-snow/10 dark:bg-eclipse/95"
         :side-offset="5">
         <DropdownMenuItem
           v-for="{ text, icon, click, active } in options"
           :key="text"
           :value="text"
           :disabled="active"
-          class="relative flex h-6 cursor-pointer items-center space-x-2 rounded-[5px] px-1 text-xs leading-none text-obsidian outline-none select-none data-disabled:cursor-not-allowed data-disabled:opacity-70 data-highlighted:bg-candy dark:text-snow"
+          class="relative flex h-8 cursor-pointer items-center space-x-2 rounded-lg px-2 text-sm leading-none text-obsidian outline-none select-none data-disabled:cursor-not-allowed data-disabled:text-candy data-highlighted:bg-candy data-highlighted:text-onyx dark:text-snow dark:data-disabled:text-candy"
           @click="click">
           <Icon :name="icon" :size="iconSize" />
           <span>{{ text }}</span>

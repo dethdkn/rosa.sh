@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h2 class="text-obsidian dark:text-snow">
+  <h2 class="text-lg text-obsidian/90 dark:text-snow/80">
     {{ t('subtitle') }}
   </h2>
 </template>

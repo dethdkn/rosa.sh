@@ -7,12 +7,13 @@
 </script>
 
 <template>
-  <div
-    class="mt-2 inline rounded border p-1 text-mini sm:mt-0"
-    :style="{ color, borderColor: color }">
-    <span class="inline-flex items-center justify-center space-x-1">
-      <Icon :name="icon" :size="10" />
-      <span>{{ title }}</span>
-    </span>
-  </div>
+  <span
+    class="inline-flex items-center gap-1 rounded-full border px-2 py-1 text-[11px] leading-none font-medium text-obsidian dark:text-snow"
+    :style="{
+      borderColor: `color-mix(in srgb, ${color} 45%, transparent)`,
+      backgroundColor: `color-mix(in srgb, ${color} 12%, transparent)`,
+    }">
+    <Icon :name="icon" :size="11" :style="{ color }" />
+    <span>{{ title }}</span>
+  </span>
 </template>

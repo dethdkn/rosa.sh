@@ -6,7 +6,7 @@
 
   useSeoMeta({ description: t('description') })
 
-  defineOgImage('Simple.takumi', { title: t('title') })
+  defineOgImage('Simple.takumi', { title: t('title'), description: t('description') })
 
   const code1 = `ping cbpf.br
 timedatectl set-ntp true
@@ -49,20 +49,18 @@ pacman -S neofetch`
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl">
-    <div class="space-y-10 px-20 py-5 text-center sm:text-start lg:space-y-20">
-      <h1 class="inline border-b-2 border-candy text-4xl text-obsidian dark:text-snow">
-        {{ t('title') }}
-      </h1>
-    </div>
-    <div class="mt-10 space-y-5 px-10 text-obsidian dark:text-snow">
-      <ScriptYouTubePlayer video-id="YGX3None2y8" />
+  <article class="mx-auto w-full max-w-4xl px-6 py-12 sm:px-10">
+    <PageHeader :title="t('title')" :description="t('description')" />
+    <div class="mt-12 space-y-6 text-lg leading-relaxed text-obsidian/85 dark:text-snow/80">
+      <div class="overflow-hidden rounded-2xl border border-obsidian/10 dark:border-snow/10">
+        <ScriptYouTubePlayer video-id="YGX3None2y8" />
+      </div>
       <p>{{ t('paragraph1') }}</p>
       <CodeHighlight file-name="Arch Install" :code="code1" lang="shell" />
       <p>{{ t('paragraph2') }}</p>
       <p>{{ t('final_paragraph') }}</p>
     </div>
-  </div>
+  </article>
 </template>
 
 <i18n lang="json">

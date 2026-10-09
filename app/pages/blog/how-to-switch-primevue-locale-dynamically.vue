@@ -8,7 +8,7 @@
 
   useSeoMeta({ description: t('description') })
 
-  defineOgImage('Simple.takumi', { title: t('title') })
+  defineOgImage('Simple.takumi', { title: t('title'), description: t('description') })
 
   const code1 = `export default defineNuxtConfig({
   i18n: {
@@ -77,13 +77,9 @@ function changeLang() {
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl">
-    <div class="space-y-10 px-20 py-5 text-center sm:text-start lg:space-y-20">
-      <h1 class="inline border-b-2 border-candy text-4xl text-obsidian dark:text-snow">
-        {{ t('title') }}
-      </h1>
-    </div>
-    <div class="mt-10 space-y-5 px-10 text-obsidian dark:text-snow">
+  <article class="mx-auto w-full max-w-4xl px-6 py-12 sm:px-10">
+    <PageHeader :title="t('title')" :description="t('description')" />
+    <div class="mt-12 space-y-6 text-lg leading-relaxed text-obsidian/85 dark:text-snow/80">
       <p>{{ t('paragraph1') }}</p>
       <p>{{ t('paragraph2') }}</p>
       <p>{{ t('paragraph3') }}</p>
@@ -91,16 +87,17 @@ function changeLang() {
         to="https://github.com/primefaces/primelocale"
         external
         target="_blank"
-        class="inline-block border-b-2 text-obsidian hover:border-candy hover:text-candy dark:text-snow hover:dark:border-candy dark:hover:text-candy">
+        class="inline-block border-b-2 border-candy/50 text-obsidian transition-all duration-300 hover:border-candy hover:text-candy dark:text-snow dark:hover:text-candy">
         primefaces / primelocale
       </NuxtLink>
       <p>{{ t('paragraph4') }}</p>
       <p>{{ t('paragraph5') }}</p>
-      <hr class="my-8 h-px border-0 bg-gray-300 dark:bg-gray-600" />
+      <hr class="my-10 h-px border-0 bg-obsidian/10 dark:bg-snow/10" />
       <p>{{ t('paragraph6') }}</p>
       <CodeHighlight file-name="nuxt.config.ts" :code="code1" lang="ts" />
       <p>{{ t('paragraph7') }}</p>
-      <pre>
+      <pre
+        class="overflow-auto rounded-2xl border border-obsidian/10 bg-milk p-5 text-base dark:border-snow/10 dark:bg-eclipse font-mono">
 /locales
 ----/en.ts
 ----/pt.ts
@@ -110,7 +107,7 @@ function changeLang() {
       <p>{{ t('paragraph8') }}</p>
       <CodeHighlight file-name="Primevue Component Text" :code="code2" lang="json" />
       <p>{{ t('paragraph9') }}</p>
-      <hr class="my-8 h-px border-0 bg-gray-300 dark:bg-gray-600" />
+      <hr class="my-10 h-px border-0 bg-obsidian/10 dark:bg-snow/10" />
       <p>{{ t('paragraph10') }}</p>
       <CodeHighlight file-name="components/Navbar.vue" :code="code3" lang="vue" />
       <p>{{ t('paragraph11') }}</p>
@@ -118,7 +115,7 @@ function changeLang() {
       <p>{{ t('paragraph12') }}</p>
       <p>{{ t('final_paragraph') }}</p>
     </div>
-  </div>
+  </article>
 </template>
 
 <i18n lang="json">

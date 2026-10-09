@@ -4,6 +4,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
+  * {
+    @apply font-montserrat transition-colors duration-500 ease-in-out;
+  }
+
   button:not(:disabled),
   [role='button']:not(:disabled) {
     cursor: pointer;
@@ -76,10 +80,6 @@
       transform: translateY(0);
     }
   }
-}
-
-* {
-  @apply font-montserrat transition-colors duration-500 ease-in-out;
 }
 
 *::selection {
