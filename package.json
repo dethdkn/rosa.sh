@@ -49,7 +49,7 @@
     "emoji-blast": "^0.12.0",
     "mime": "^4.1.0",
     "motion-v": "^2.6.0",
-    "nuxt": "4.6.0",
+    "nuxt": "4.6.1",
     "nuxt-aos": "^1.2.6",
     "reka-ui": "^2.11.0",
     "shiki": "4.5.0",
@@ -60,7 +60,7 @@
     "vue-router": "^5.4.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20261009.1",
+    "@cloudflare/workers-types": "^5.20261010.1",
     "@dethdkn/ox-config": "^1.0.26",
     "@golar/vue": "^0.1.10",
     "@types/youtube": "^0.3.0",
