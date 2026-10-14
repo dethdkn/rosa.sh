@@ -88,4 +88,5 @@ export default defineNuxtConfig({
   },
   icon: { customCollections: [{ prefix: 'cc', dir: 'app/assets/custom-icons' }] },
   linkChecker: { enabled: false },
+  skewProtection: false,
 })
